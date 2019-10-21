@@ -1,6 +1,14 @@
 check50:
   checks:
-    hello world:
+    hello world: # define a check named hello world
       - run: python3 hello.py
         stdout: Hello, world!
-        exit: 0
+        exit: 0 # expect program to exit with exitcode 0 
+       
+       - run: python3 multi_hello.py
+        stdout: | # expect Hello\nWorld!\n in stdout
+          Hello
+          World!
+         exit: 0
+         
+         
